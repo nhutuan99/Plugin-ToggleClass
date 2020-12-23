@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Plugin Toggle Class</title>
+    <link rel="shortcut icon" type="image/png" href="Capture-removebg.png">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .navbar-1{
+        max-height: 50px;
+        background-color: rgb(0,123,255);
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 300px;
+    }
+    .container-1{
+        float: left;
+        position: relative;
+    }
+    .toClick{
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    .toShow{
+        position: absolute;
+        width: 200px;
+        font-size: 13px;
+        transition: 0.4s;
+        right: -3px;
+        display: none;
+    }
+    .toShow::after{
+        content: "";
+        position: absolute;
+        top: -18px;
+        right: 21px;
+        width: 3px;
+        height: 3px;
+        border: 10px solid transparent;
+        border-bottom-color: white;
+    }
+    .show{
+        display: block;
+    }
+    .white{
+        color: white;
+    }
+</style>
+<body>
+    
+    <div class="navbar-1">
+        <div class="container-1">
+                <div class="toClick" data-show="user"><i class="fa fa-user-circle"></i></div>
+                    <div class="toShow" id="user">
+                        <ul class="list-group">
+                            <li class="list-group-item">Ronaldo</li>
+                            <li class="list-group-item">Messi</li>
+                            <li class="list-group-item">Neymar</li>
+                        </ul>
+                    </div>
+        </div>
+        <div class="container-1">
+            <div class="toClick" data-show="info"><i class="fa fa-info-circle"></i></div>
+                <div class="toShow" id="info">
+                    <ul class="list-group">
+                        <li class="list-group-item">Ronaldo</li>
+                        <li class="list-group-item">Messi</li>
+                        <li class="list-group-item">Neymar</li>
+                    </ul>
+                </div>
+        </div>
+        <div class="container-1">
+        <div class="toClick" data-show="comment"><i class="fa fa-comment"></i></div>
+            <div class="toShow" id="comment">
+                <ul class="list-group">
+                    <ul class="list-group">
+                        <li class="list-group-item">Ronaldo</li>
+                        <li class="list-group-item">Messi</li>
+                        <li class="list-group-item">Neymar</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+  
+    <script type="text/javascript" src="./index.js "></script>
+</body>
+</html> 
